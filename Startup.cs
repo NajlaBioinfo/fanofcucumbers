@@ -11,6 +11,8 @@ using fanofcucumbers.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using Microsoft.AspNetCore.Http;
 
 namespace fanofcucumbers
 {
@@ -44,6 +46,22 @@ namespace fanofcucumbers
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
+            });
+                services.AddRazorPages();
+
+            services.AddHsts(options =>
+            {
+                options.Preload = true;
+                options.IncludeSubDomains = true;
+                options.MaxAge = TimeSpan.FromDays(260);
+                options.ExcludedHosts.Add("fanofcucumbers.com");
+                options.ExcludedHosts.Add("www.fanofcucumbers.com");
+            });
+
+            services.AddHttpsRedirection(options =>
+            {
+                options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
+                options.HttpsPort = 5001;
             });
         }
 
