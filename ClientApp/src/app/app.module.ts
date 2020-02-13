@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+import {MatSortModule} from '@angular/material/sort';
+import { MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     ]),
     BrowserAnimationsModule,
     AngularMaterialModule,
+    MatTableModule,
+    MatSortModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
