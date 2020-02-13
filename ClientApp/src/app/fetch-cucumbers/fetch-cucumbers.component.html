@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1><a class="firstlink-tb" mat-list-item [routerLink]="'/dash-board'"> CucumberDash </a></h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/accounts'"> AboutData </a>
+      <a mat-button [routerLink]="'/fetch-cucumbers'"> Table </a>
+      <a mat-button [routerLink]="'/create'"> Charts </a>
+    </div>   
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/accounts'"> AboutData </a>
+      <a mat-list-item [routerLink]="'/fetch-cucumbers'"> Table </a>
+      <a mat-list-item [routerLink]="'/create'"> Charts </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <div class="container">
+        <h1 id="tablecucumber">Cucumbers data</h1>
+        <p>This component demonstrates fetching data from the csv file.</p>
+
+        <p ><em>Some table here</em></p>
+
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

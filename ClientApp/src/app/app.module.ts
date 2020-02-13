@@ -7,8 +7,9 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-
 import { DashBoardComponent } from './dash-board/dash-board.component';
+import { FetchCucumbersComponent } from './fetch-cucumbers/fetch-cucumbers.component';
+
 import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
@@ -17,12 +18,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    FetchCucumbersComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,6 +35,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'dash-board', component: DashBoardComponent, canActivate: [AuthorizeGuard] },
+      { path: 'fetch-cucumbers', component: FetchCucumbersComponent, canActivate: [AuthorizeGuard] },
     ]),
     BrowserAnimationsModule,
     AngularMaterialModule,

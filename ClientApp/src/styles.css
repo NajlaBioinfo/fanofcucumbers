@@ -20,3 +20,28 @@ code {
 /* My css */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.mat-button {
+  color: white;
+  background: transparent;
+}
+
+.mat-button:hover {
+  color: rosybrown;
+  text-decoration: none;
+  background: transparent;
+}
+
+.firstlink-tb {
+  color: white;
+  background: transparent;
+}
+
+.firstlink-tb:hover {
+  color: rosybrown;
+  text-decoration: none;
+  background: transparent;
+}
+
