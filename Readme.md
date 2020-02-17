@@ -1,6 +1,6 @@
 # FanOfCucumbers
 ![alt text](ClientApp/src/assets/pngs/cucumbers.png "FanOfCucumbers_icon")
->>> A .NET web application aims to mange some data visualization librairies based on public data.
+>>> A .NET web application aims to manage some data visualization librairies based on public data.
 
 
 ### - Launch
@@ -38,6 +38,11 @@ You may have to trust the website because it self-signed.
 c)
 => You should see the web app at "https://containerIP"
 This method is unavailable with docker-mac.
+
+
+### References
+- Datasource: This application use cucumbers public data available here https://open.canada.ca/data/en/dataset.
+
 
 ### - License
 MIT

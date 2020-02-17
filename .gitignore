@@ -4,7 +4,7 @@
 
 # Env
 fanenv/
-
+nodeenv.py
 # User-specific files
 *.suo
 *.user
