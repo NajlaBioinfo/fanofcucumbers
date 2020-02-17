@@ -14,5 +14,13 @@ table {
   
   td, th {
     width: 25%;
+    color: navy;
   }
   
+.mat-row:nth-child(even){
+    background-color:whitesmoke;
+    }
+
+.mat-row:nth-child(odd){
+    background-color: ghostwhite;
+    }
