@@ -30,7 +30,7 @@
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
     "hammerjs": "^2.0.8",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "material-design-icons-iconfont": "^5.0.1",
     "ng-bootstrap": "^1.6.3",
     "oidc-client": "^1.9.1",
